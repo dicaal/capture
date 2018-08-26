@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { HomePage } from '../home/home';
 import { AppProvider } from '../../providers/app/app';
 import { TabsPage } from '../../pages/tabs/tabs';
-// import { RegisterPage } from '../../pages/register/register';
+import { RegisterPage } from '../../pages/register/register';
 
 
 /**
@@ -24,7 +24,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public _app: AppProvider) { 
 
-    // this.pushPage = RegisterPage;
+  this.pushPage = RegisterPage;
   }
 
   user: any = {
@@ -35,6 +35,11 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  public createAccount() {
+    console.log("push works",this.navCtrl.push)
+    this.navCtrl.push(RegisterPage);
   }
 
   onLogin() {
@@ -49,7 +54,5 @@ export class LoginPage {
     
   }
 
-  public createAccount() {
-    this.navCtrl.push('RegisterPage');
-  }
+  
 }

@@ -26,9 +26,9 @@ export class RegisterPage {
     password:""
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad RegisterPage');
+  // }
   
   onRegister(){
     console.log("register",this.user)
@@ -38,7 +38,7 @@ export class RegisterPage {
       window.sessionStorage.setItem('token', response.token);
       window.sessionStorage.setItem('userId', response.UserId);
       console.log(" register works",response);
-      this.navCtrl.setRoot(TabsPage);
+      this.navCtrl.setRoot(RegisterPage);
     })
 }
 

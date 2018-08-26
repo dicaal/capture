@@ -47,14 +47,14 @@
         
         <ion-row>
           <ion-col class="signup-col">
-              <button  ion-button (click)="onLogin()" id="user" class="submit-btn" full type="submit" >Login</button>
+              <button  ion-button (tappable)="onLogin()" id="user" class="submit-btn" full type="submit" >Login</button>
             <button ion-button class="register-btn" block clear (click)="createAccount()">New Account</button> 
             
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-              <button ion-button [navPush] = "RegisterPage">Create New Account</button>
+              <!-- <button ion-button [navPush] = "RegisterPage">Create New Account</button> -->
           </ion-col>
         </ion-row>
   
