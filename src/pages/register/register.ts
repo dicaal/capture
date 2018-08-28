@@ -20,8 +20,8 @@ export class RegisterPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public _app: AppProvider) {
   }
   user: any = {
-    firstName:"",
-    lastName:"",
+    first:"",
+    last:"",
     email:"",
     password:""
   }
@@ -38,8 +38,12 @@ export class RegisterPage {
       window.sessionStorage.setItem('token', response.token);
       window.sessionStorage.setItem('userId', response.UserId);
       console.log(" register works",response);
-      this.navCtrl.setRoot(RegisterPage);
-    })
+      this.navCtrl.setRoot(TabsPage);
+    },
+    err=>{ 
+      console.log(err.message);    
+        }
+  )
 }
 
 

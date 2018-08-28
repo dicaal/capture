@@ -40,6 +40,7 @@ export class LoginPage {
   public createAccount() {
     console.log("push works",this.navCtrl.push)
     this.navCtrl.push(RegisterPage);
+    console.log("register is working",RegisterPage);
   }
 
   onLogin() {
@@ -50,7 +51,12 @@ export class LoginPage {
         window.sessionStorage.setItem('userId', response.UserId);
         console.log("works",response);
         this.navCtrl.setRoot(TabsPage);
-      })
+        
+      },
+    
+  err=>{ 
+console.log(err.message);    
+  })
     
   }
 

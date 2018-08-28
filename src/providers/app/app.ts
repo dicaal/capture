@@ -9,9 +9,9 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class AppProvider {
-  registerURL = "http://localhost:3000/api/appUsers?";
-  loginURL = "http://localhost:3000/api/appUsers/login?";
-  logoutURL = "http://localhost:3000/api/appUsers/login?";
+  registerURL = "http://summer-carlos-2018-phortonssf.c9users.io:8080/api/appusers";
+  loginURL = "http://summer-carlos-2018-phortonssf.c9users.io:8080/api/appusers/login";
+  logoutURL = "http://summer-carlos-2018-phortonssf.c9users.io:8080/api/appusers/logout";
 
   constructor(public http: HttpClient) {
     console.log('Hello AppProvider Provider');
